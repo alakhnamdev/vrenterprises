@@ -329,6 +329,7 @@ body {
     }
     .sec4 {
         padding-left: 13%;
+        margin-top: 35%;
     }
     .sec4 h3 {
         padding-left: 4%;
@@ -347,5 +348,8 @@ body {
     }
     .seg2 {
         padding-left: 17%;
+    }
+    .about {
+        width: 182%;
     }
 }
