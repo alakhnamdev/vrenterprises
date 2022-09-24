@@ -204,29 +204,6 @@ body {
 /* Content 2 ends */
 
 
-/* Content 3 */
-
-.slide-container {
-    width: 1366;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.image-slider {
-    height: 100%;
-    width: 600px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 0;
-}
-
-
-/* Content 3 ends */
-
-
 /* About Us */
 
 .about {
@@ -235,7 +212,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     background: #2a3748;
     padding: 5%;
-    margin-top: 600px;
 }
 
 .seg1 {
@@ -296,18 +272,15 @@ body {
 }
 
 
-/* 
-.seg4 {
-    grid-area: seg4;
-} */
-
-
 /* About Us Ends */
 
 
 /* Responsive layout */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
+    body {
+        height: 274vh;
+    }
     .navbar {
         grid-template-areas: "navlogo" "navcontent";
         grid-template-columns: 1fr;
@@ -315,6 +288,7 @@ body {
         border: none;
     }
     .navlogo {
+        padding-left: 40%;
         text-align: center;
     }
     .navcontent {
@@ -322,25 +296,56 @@ body {
     }
     .content {
         background-size: 1000px 1000px;
-        height: auto;
-        grid-template-areas: "part2" "part1";
+        grid-template-areas: "part1" "part2";
         grid-template-columns: 1fr;
         border: none;
     }
     .sec1 {
-        padding: 0% 15%;
+        margin-top: -15%;
+        margin-left: -17%;
+    }
+    .sec1 p {
+        font-size: 1em;
     }
     .sec2 img {
         justify-items: center;
-        padding: 14%;
+        padding-left: 11%;
+    }
+    @keyframes animate {
+        0%,
+        10%,
+        100% {
+            width: 0;
+        }
+        70%,
+        90% {
+            width: 110%;
+        }
     }
     .content2 {
-        grid-template-areas: "sec3" "sec4";
+        grid-template-areas: "part4" "part3";
         grid-template-columns: 1fr;
+        height: auto;
+    }
+    .sec4 {
+        padding-left: 13%;
+    }
+    .sec4 h3 {
+        padding-left: 4%;
+    }
+    .sec4 p {
+        padding-right: 0;
+    }
+    .sec3 img {
+        margin-left: 7%;
+        margin-bottom: 7%;
+        padding: 0%;
     }
     .about {
-        grid-template-areas: "Sec1" "seg2" "seg3";
         grid-template-columns: 1fr;
-        text-align: center;
+        width: 147.7%;
+    }
+    .seg2 {
+        padding-left: 17%;
     }
 }
